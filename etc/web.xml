@@ -43,4 +43,9 @@
     <url-pattern>/Contact.do</url-pattern>
   </servlet-mapping>
 
+  <context-param>
+    <param-name>admin</param-name>
+    <param-value>Andrew</param-value>
+  </context-param>
+
 </web-app>

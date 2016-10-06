@@ -10,6 +10,11 @@ public class ContactServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    out.println(getServletConfig().getInitParameter("adminEmail"));
+    ServletConfig servletConfig = getServletConfig();
+    out.println(servletConfig.getInitParameter("adminEmail")); // Servlet-scoped parameter
+
+    ServletContext servletContext = getServletContext();
+    out.println("<br><br>");
+    out.println(servletContext.getInitParameter("admin")); // App-scoped parameter
   }
 }
