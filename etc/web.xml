@@ -3,12 +3,16 @@
   xsi:schemaLocation='http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd'
   version='2.4'>
 
+  <welcome-file-list>
+    <welcome-file>form.html</welcome-file>
+  </welcome-file-list>
+
   <servlet>
-    <servlet-name>Home</servlet-name>
+    <servlet-name>SelectItem</servlet-name>
     <servlet-class>com.example.web.SelectItemServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Home</servlet-name>
+    <servlet-name>SelectItem</servlet-name>
     <url-pattern>/SelectItem.do</url-pattern>
   </servlet-mapping>
 
