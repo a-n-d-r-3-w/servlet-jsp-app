@@ -21,4 +21,26 @@
     <url-pattern>/DownloadFile.do</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Redirect</servlet-name>
+    <servlet-class>com.example.web.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Redirect</servlet-name>
+    <url-pattern>/Redirect.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Contact</servlet-name>
+    <servlet-class>com.example.web.ContactServlet</servlet-class>
+    <init-param>
+      <param-name>adminEmail</param-name>
+      <param-value>liu.anray@gmail.com</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Contact</servlet-name>
+    <url-pattern>/Contact.do</url-pattern>
+  </servlet-mapping>
+
 </web-app>

@@ -10,7 +10,7 @@ public class SelectItemServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     String item = request.getParameter("item");
     ItemAdvisor advisor = new ItemAdvisor();
-    List recommendations = advisor.getRecommendations(item);
+    List<String> recommendations = advisor.getRecommendations(item);
     request.setAttribute("recommendations", recommendations);
 
     String[] options = request.getParameterValues("options");
