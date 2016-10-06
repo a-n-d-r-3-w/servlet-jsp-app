@@ -11,15 +11,11 @@ public class SelectItemServlet extends HttpServlet {
     String item = request.getParameter("item");
     ItemAdvisor advisor = new ItemAdvisor();
     List recommendations = advisor.getRecommendations(item);
-
-    // response.setContentType("text/html");
-    // PrintWriter out = response.getWriter();
-    // out.println("Item Selection Advice<br>");
-    // Iterator it = recommendations.iterator();
-    // while (it.hasNext()) {
-    //   out.println("<br>Try: " + it.next());
-    // }
     request.setAttribute("recommendations", recommendations);
+
+    String[] options = request.getParameterValues("options");
+    request.setAttribute("options", options);
+
     RequestDispatcher view = request.getRequestDispatcher("result.jsp");
     view.forward(request, response);
   }

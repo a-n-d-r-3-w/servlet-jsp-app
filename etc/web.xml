@@ -2,6 +2,7 @@
   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
   xsi:schemaLocation='http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd'
   version='2.4'>
+
   <servlet>
     <servlet-name>Home</servlet-name>
     <servlet-class>com.example.web.SelectItemServlet</servlet-class>
@@ -10,4 +11,14 @@
     <servlet-name>Home</servlet-name>
     <url-pattern>/SelectItem.do</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DownloadFile</servlet-name>
+    <servlet-class>com.example.web.DownloadFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadFile</servlet-name>
+    <url-pattern>/DownloadFile.do</url-pattern>
+  </servlet-mapping>
+
 </web-app>
